@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/split.js/1.5.11/split.min.js"
+        integrity="sha256-9u7Hr7DXDRNHVZ/p9uoV5oIHL9Ql7Qx3dKPJzeRakII=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="main">
+        <div id="nav">
+            <img id="logo" src="logo.png" alt="">
+            <div id="links">
+                <a href="#">Home</a>
+                <a href="#">Projects</a>
+                <a href="#">Contact</a>
+                <input type="text" placeholder="search">
+            </div>
+        </div>
+        <div class="flex" id="back">
+            <div id="one">
+                <div id="text">
+                    <h1>Design<br>ing</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo culpa expedita obcaecati minus
+                        consequuntur. Dolorum, iure cumque accusamus repellat dolor natus quisquam animi.</p>
+                    <button>See Developer Side of Me</button>                    
+                </div>
+            </div>
+            <div id="two">
+                <div id="text">
+                    <h1>develop<br>ment</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo culpa expedita obcaecati minus
+                        consequuntur. Dolorum, iure cumque accusamus repellat dolor natus quisquam animi.</p>
+                    <button>See Developer Side of Me</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function react(){window.innerWidth<600?(document.querySelector(".flex").style.flexDirection="column",Split(["#one","#two"],{elementStyle:(e,t,i)=>({"flex-basis":`calc(${t}% - ${i}px)`}),gutterStyle:(e,t)=>({"flex-basis":"5px"}),direction:"vertical"})):Split(["#one","#two"],{elementStyle:(e,t,i)=>({"flex-basis":`calc(${t}% - ${i}px)`}),gutterStyle:(e,t)=>({"flex-basis":"5px"}),direction:"horizontal"})}react(),window.addEventListener("resize",react);var intrvl=setInterval(function(){var e=document.querySelector(".gutter");null!==e&&(e.style.position="relative",e.innerHTML='<div id="circ"></div>',document.querySelector("#circ").style.width="100px",clearInterval(intrvl))},100);
+    </script>
+
+</body>
+
+</html>
